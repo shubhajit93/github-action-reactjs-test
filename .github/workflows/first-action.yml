@@ -12,7 +12,7 @@ jobs:
                 node-version: 20
 
             - name: Install dependency
-              run: npm ci
+              run: npm install
             - name: Run test
               run: npm test
 
@@ -27,6 +27,8 @@ jobs:
           with:
             node-version: 20
 
+        - name: Install dependency
+          run: npm install
         - name: build code
           run: npm run build
         - name: deploy
